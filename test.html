@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数字不断变化</title>
+	<style>
+		.zxbj-calc-budget{
+			position: absolute;
+			left: 41px;
+			top: 78px;
+			height: 39px;
+			width: 185px;
+			background:salmon;
+		}
+		.zxbj-calc-budget div{	
+			float: right;
+			display: none;
+			margin-left: 3px;
+			width: 22px;
+			height: 39px;
+			background:url(http://img.to8to.com/to8to_img/zxbj/zxbj_calc_num.png?v=201707011645) no-repeat;
+		}
+		.zxbj-calc-budget .num0{
+			display: block;
+			background-position: 0 0;
+		}
+		.zxbj-calc-budget .num1{
+			display: block;
+			width: 8px;
+			background-position: -35px 0;
+		}
+		.zxbj-calc-budget .num2{
+			display: block;
+			background-position: -54px 0;
+		}
+		.zxbj-calc-budget .num3{
+			display: block;
+			background-position: -89px 0;
+		}
+		.zxbj-calc-budget .num4{
+			display: block;
+			background-position: -127px -2px;
+		}
+		.zxbj-calc-budget .num5{
+			display: block;
+			background-position: -168px 0;
+		}
+		.zxbj-calc-budget .num6{
+			display: block;
+			background-position: -202px 0;
+		}
+		.zxbj-calc-budget .num7{
+			display: block;
+			background-position: -237px 0;
+		}
+		.zxbj-calc-budget .num8{
+			display: block;
+			background-position: -271px 0;
+		}
+		.zxbj-calc-budget .num9{
+			display: block;
+			background-position: -306px 0;
+		}
+	</style>
+<script src="jquery-1.7.2.min.js"></script>	
+</head>
+<body>
+
+			<div class="zxbj-calc-header">
+                <div id="div1" class="zxbj-calc-budget">
+                    <div class="num-ge "></div>
+                    <div class="num-shi "></div>
+                    <div class="num-bai "></div>
+                    <div class="num-qian "></div>
+                    <div class="num-wan "></div>
+                    <div class="num-shiwan "></div>
+                </div>
+            </div>
+    <script>
+    	var divList=document.getElementById("div1").getElementsByTagName('div');
+    	setInterval(function(){
+    		for(var i=0;i<divList.length;i++){
+    			var num=parseInt(Math.random()*9);
+    			divList[i].setAttribute("class","num"+num);
+	    	}
+    	},1000)
+    </script>        
+</body>
+</html>
